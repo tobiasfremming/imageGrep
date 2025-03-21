@@ -6,12 +6,13 @@ from PIL import Image
 if __name__ == '__main__':
     
     # Open the PDF file
-    out_dir = "out"
+    file_name = "CGVIZ__Transformations"
+    out_dir = "out/"+file_name
     if not os.path.exists(out_dir):
         os.makedirs(out_dir)
     out_dir += "/"
     
-    file_name = "domain_repetition.pdf"
+    file_name += ".pdf"
     current_dir = os.path.dirname(__file__) 
     file_path = os.path.join(current_dir, "pdfs", file_name)
     input1 = PyPDF2.PdfReader(open(file_path, "rb"))
